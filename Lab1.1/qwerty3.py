@@ -1,0 +1,2 @@
+s = 'Test'
+dir (s)
