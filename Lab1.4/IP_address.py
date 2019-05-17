@@ -13,15 +13,18 @@ class IPv4RandomNetwork(IPv4Network):
 
     return (int(self.network_address) + 2**32 * int(self.netmask))
 
+def func_compare(x):
+    # q = int(x.network_address) + int(x.netmask) * 2**32
+    return x.key_value()
+
 
 L = []
-for x in range(0, 120):
+for x in range(0, 10):
     net = IPv4RandomNetwork()
     L.append(net)
 
-    def func_compare(x):
-        q = int(x.network_address) + 2**32 * int(x.netmask)
-        return (q)
 
-    sorted (L, key = func_compare)
-print (L, x)
+z = sorted (L, key = func_compare)
+#print (L)
+for i in z:
+    print(i)
