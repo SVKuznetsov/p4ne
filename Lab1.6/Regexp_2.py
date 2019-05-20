@@ -54,11 +54,14 @@ for current_file_name in glob.glob("C:\\PY_WORK\\*.txt"):
                 hosts.append(c)
                 table[current_file_name]['hostname'] = c['host']
 
-# pprint.pprint(table)
+pprint.pprint(table)
 
 for x in table.keys():
     for y in table[x]['ip']:
         print(table[x]['hostname'],"\t", y)
+    for y in table[x]['interfaces']:
+        print(table[x]['hostname'], "\t", y)
+
 #print(interfaces)
 #print(hosts)
 
