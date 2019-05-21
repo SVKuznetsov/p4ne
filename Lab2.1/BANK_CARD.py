@@ -17,7 +17,7 @@ for r in cards:
         r = requests.get('https://lookup.binlist.net/'+num, headers={'Accept-Version': "3"})
         time.sleep(5)
         if 200 <= r.status_code <= 299:
-            pprint.pprint(r.json())
+            pprint.pprint(r.json()['bank']['name'])
         else:
             print(r.status_code)
 
