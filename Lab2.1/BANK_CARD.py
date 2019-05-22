@@ -18,6 +18,9 @@ for r in cards:
         time.sleep(5)
         if 200 <= r.status_code <= 299:
             pprint.pprint(r.json()['bank']['name'])
+            #pprint.pprint("Название банка: "(r.json()['bank']['name']))
+            #t = ((r.json()['bank']['name']))
+            #print ("Название банка: ", t)
         else:
             print(r.status_code)
 
